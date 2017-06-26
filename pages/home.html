@@ -1,0 +1,13 @@
+<h1 class="page-title">Watto's Spaceship Emporium</h1>
+
+<ul class="spaceships">
+  <li ng-repeat="spaceship in spaceships">
+    <a class="spaceship" ng-href="#/spaceship/{{$index}}">
+      <div class="spaceship__image-wrapper">
+        <img class="spaceship__image" ng-src="/images/spaceship-{{$index}}.jpg" alt="" />
+        <div class="spaceship__price">{{spaceship.price}}</div>
+      </div>
+      <div class="spaceship__title">{{spaceship.name}}</div>
+    </a>
+  </li>
+</ul>

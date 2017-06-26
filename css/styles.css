@@ -1,0 +1,165 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box; }
+
+html,
+body {
+  height: 100%; }
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  color: #2c3e50;
+  background-attachment: fixed;
+  background-image: linear-gradient(110deg, rgba(52, 73, 94, 0.02) 62%, transparent 62%), linear-gradient(290deg, rgba(52, 73, 94, 0.03) 30%, transparent 30%), linear-gradient(76deg, rgba(52, 73, 94, 0.04) 57%, transparent 57%), linear-gradient(221deg, rgba(52, 73, 94, 0.05) 85%, transparent 85%), linear-gradient(207deg, rgba(52, 73, 94, 0.06) 18%, transparent 18%), linear-gradient(280deg, rgba(52, 73, 94, 0.05) 61%, transparent 61%), linear-gradient(25deg, rgba(52, 73, 94, 0.04) 55%, transparent 55%), linear-gradient(275deg, rgba(52, 73, 94, 0.03) 11%, transparent 11%), linear-gradient(161deg, rgba(52, 73, 94, 0.02) 40%, transparent 40%); }
+
+a {
+  color: #e74c3c;
+  transition: 0.2s; }
+  a:focus, a:hover {
+    color: #a82315; }
+
+::selection {
+  background: #2c3e50;
+  color: white; }
+
+::-moz-selection {
+  background: #2c3e50;
+  color: white; }
+
+.container {
+  padding: 15px;
+  max-width: 1400px;
+  margin: auto; }
+  .container:before, .container:after {
+    content: "";
+    clear: both;
+    display: table; }
+
+.back-button {
+  display: inline-block;
+  height: 20px;
+  margin-right: 10px; }
+  .back-button + .page-title {
+    display: inline-block;
+    width: calc(100% - 30px); }
+
+.page-title {
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-size: 25px; }
+
+.spaceships {
+  display: flex;
+  flex-flow: row wrap;
+  align-content: space-between;
+  margin: 0 -15px;
+  padding: 0; }
+  .spaceships li {
+    list-style: none;
+    flex-basis: 100%;
+    margin: 15px; }
+    @media only screen and (min-width: 668px) {
+      .spaceships li {
+        flex-basis: calc(50% - 30px); } }
+    @media only screen and (min-width: 1100px) {
+      .spaceships li {
+        flex-basis: calc(33.333333% - 30px); } }
+
+.spaceship {
+  color: #2c3e50;
+  text-decoration: none;
+  display: block;
+  overflow: hidden;
+  background-color: white;
+  border: 1px solid rgba(44, 62, 80, 0.2);
+  border-radius: 5px;
+  box-shadow: 0 3px 5px rgba(44, 62, 80, 0.2); }
+  .spaceship:focus, .spaceship:hover {
+    box-shadow: 0 5px 20px rgba(44, 62, 80, 0.3);
+    transform: scale(1.01); }
+
+.spaceship__image-wrapper {
+  position: relative;
+  overflow: hidden; }
+  @supports (object-fit: cover) {
+    .spaceship__image-wrapper {
+      height: 250px; } }
+
+.spaceship__image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; }
+
+.spaceship__price:not(:empty) {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  color: white;
+  background-color: #2c3e50;
+  padding: 12px 15px; }
+  @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
+    .spaceship__price:not(:empty) {
+      -webkit-backdrop-filter: blur(3px);
+      backdrop-filter: blur(3px);
+      background-color: rgba(0, 0, 0, 0.5); } }
+
+.spaceship__title {
+  padding: 15px; }
+
+.info {
+  margin: 15px 0; }
+  @media only screen and (min-width: 768px) {
+    .info {
+      width: 70%;
+      float: left;
+      padding-right: 15px; } }
+
+.info__image {
+  width: 100%;
+  display: block;
+  margin-bottom: 15px;
+  background-color: white;
+  border: 1px solid rgba(44, 62, 80, 0.2);
+  border-radius: 5px;
+  box-shadow: 0 3px 5px rgba(44, 62, 80, 0.2);
+  padding: 15px; }
+
+.specs {
+  background-color: white;
+  border: 1px solid rgba(44, 62, 80, 0.2);
+  border-radius: 5px;
+  box-shadow: 0 3px 5px rgba(44, 62, 80, 0.2);
+  padding: 15px;
+  margin: 15px 0; }
+  @media only screen and (min-width: 768px) {
+    .specs {
+      width: 30%;
+      float: left; } }
+
+.specs__title {
+  margin: 0; }
+
+.specs__list {
+  padding: 0;
+  list-style: none;
+  overflow: auto; }
+
+.specs__buy {
+  background-color: #2c3e50;
+  padding: 12px 15px;
+  color: white;
+  font-weight: 700;
+  letter-spacing: .5em;
+  text-transform: uppercase;
+  font-size: 12px;
+  text-decoration: none;
+  display: block;
+  text-align: center; }
+  .specs__buy:focus, .specs__buy:hover {
+    background-color: #e74c3c;
+    color: white; }
+
+/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,21 @@
+<a class="back-button" href="#/" aria-label="Back">
+  <svg height="20" width="13.5" fill="currentColor">
+    <polyline points="10,0 0,10 10,20 13.5,16.5 7,10 13.5,3.5"></polyline>
+  </svg>
+</a>
+<h1 class="page-title">{{spaceship.name}}</h1>
+
+<div class="info">
+  <img class="info__image" src="images/spaceship-{{shipId}}.jpg" alt="" />
+  <p class="info__info">The {{spaceship.name}} is a {{spaceship.class | lowercase}} built by {{spaceship.manufacturer}}. <span ng-show="spaceship.price">You can purchase it here for the low price of {{spaceship.price}}!</span></p>
+</div>
+
+<div class="specs">
+  <h2 class="specs__title">Tech Specs</h2>
+  <ul class="specs__list">
+    <li ng-repeat="(key, val) in spaceship.techspecs">
+      <strong>{{key | uppercase}}</strong>: <br> {{val}}
+    </li>
+  </ul>
+  <a class="specs__buy" href="#">Buy</a>
+</div>
